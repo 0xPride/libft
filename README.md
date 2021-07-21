@@ -7,4 +7,5 @@ libft is a project by 42 scholl aimed to learn c language,
 - ft_memset
 - ft_bzero
 - ft_memcpy
+- ft_memccpy
 

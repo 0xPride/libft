@@ -1,13 +1,16 @@
 CC = gcc
 NAME = libft.a
 FLAGS = -Wall -Werror -Wextra
-C_FILES = ft_memset.c ft_bzero.c ft_memcpy.c
-O_FILES = ft_memset.o ft_bzero.o ft_memcpy.o
+C_FILES = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c
+O_FILES = ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o
 
 all: $(NAME)
 
 $(NAME): obj.o
 	ar -rcs $(NAME) $(O_FILES)
+
+so: obj.o
+	$(CC) $(O_FILES) -shared -o libft.so 
 
 obj.o:
 	$(CC) $(FLAGS) -c $(C_FILES)
@@ -15,7 +18,7 @@ obj.o:
 re: fclean all
 
 fclean: clean
-	rm -f $(NAME)
+	rm -f $(NAME) libft.so
 
 clean:
 	rm -f $(O_FILES) main
