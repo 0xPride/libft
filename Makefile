@@ -1,8 +1,8 @@
 CC = gcc
 NAME = libft.a
-FLAGS = -Wall -Werror -Wextra
-C_FILES = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c
-O_FILES = ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o
+FLAGS = -Wall -Werror -Wextra -O
+C_FILES = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c ft_strlen.c
+O_FILES = ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o ft_strlen.o
 
 all: $(NAME)
 
