@@ -14,3 +14,4 @@ libft is a project by 42 scholl aimed to learn c language,
 - ft_strncpy
 - ft_strcat
 - ft_strncat
+- ft_strlcat
