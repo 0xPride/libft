@@ -3,12 +3,13 @@
 #include <string.h>
 
 int main () {
-   char dest[] = "oldstring";
+   char dest[20] = "oldstring";
    const char src[]  = "newstring";
 
-   printf("Before memmove dest = %s, src = %s\n", dest, src);
-   ft_memmove(dest, src, 9);
-   printf("After memmove dest = %s, src = %s\n", dest, src);
-
+   ft_strncpy(dest, src, 9);
+   for (int i = 0; i < 20; i++)
+   {
+   	printf("%i %c\n -> %c", i,dest[i], '\0');
+   }
    return(0);
 }
