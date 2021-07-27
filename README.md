@@ -21,3 +21,6 @@ libft is a project by 42 scholl aimed to learn c language,
 - ft_strcmp
 - ft_strncmp
 - ft_atoi
+- ft_isalpha
+- ft_isdigit
+- ft_isalnum
