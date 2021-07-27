@@ -1,15 +1,15 @@
 #include <stdio.h>
 #include "libft.h"
 #include <string.h>
+#include <bsd/string.h>
 
 int main () {
-   char dest[20] = "oldstring";
-   const char src[]  = "newstring";
+    char	*s1 = "MZIRIBMZIRIBMZE123";
+			char	*s2 = "MZIRIBMZE";
+			size_t	max = strlen(s2);
 
-   ft_strncpy(dest, src, 9);
-   for (int i = 0; i < 20; i++)
-   {
-   	printf("%i %c\n -> %c", i,dest[i], '\0');
-   }
-   return(0);
+			char	*i1 = strnstr(s1, s2, max);
+			char	*i2 = ft_strnstr(s1, s2, max);
+
+    printf("%s -> %s ",s1, s2);
 }
