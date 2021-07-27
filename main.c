@@ -2,14 +2,15 @@
 #include "libft.h"
 #include <string.h>
 #include <bsd/string.h>
+#define		REG(x)		((x > 0) ? 1 : ((x < 0) ? -1 : 0))
 
 int main () {
-    char	*s1 = "MZIRIBMZIRIBMZE123";
-			char	*s2 = "MZIRIBMZE";
-			size_t	max = strlen(s2);
+    char	*big = "abcdef";
+			char	*little = "abcdefghijklmnop";
+			size_t	size = 6;
 
-			char	*i1 = strnstr(s1, s2, max);
-			char	*i2 = ft_strnstr(s1, s2, max);
+			int		i1 = REG(strncmp(big, little, size));
+			int		i2 = REG(ft_strncmp(big, little, size));
 
-    printf("%s -> %s ",s1, s2);
+    printf("%i -> %i ",i1, i2);
 }
