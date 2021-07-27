@@ -20,3 +20,4 @@ libft is a project by 42 scholl aimed to learn c language,
 - ft_strnstr
 - ft_strcmp
 - ft_strncmp
+- ft_atoi
