@@ -28,3 +28,7 @@ libft is a project by 42 scholl aimed to learn c language,
 - ft_isprint
 - ft_toupper
 - ft_tolower
+
+## bonus part
+
+- ft_memalloc
