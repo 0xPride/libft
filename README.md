@@ -32,3 +32,4 @@ libft is a project by 42 scholl aimed to learn c language,
 ## bonus part
 
 - ft_memalloc
+- ft_memdel
