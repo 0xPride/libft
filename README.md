@@ -35,3 +35,4 @@ libft is a project by 42 scholl aimed to learn c language,
 - ft_memdel
 - ft_strnew
 - ft_striter
+- ft_striteri
