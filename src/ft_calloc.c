@@ -19,5 +19,5 @@ void *ft_calloc(size_t nmemb, size_t size)
     buff[i] = 0;
     i++;
   }
-  return (buff);
+  return ((void *)buff);
 }

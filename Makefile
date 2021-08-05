@@ -3,17 +3,23 @@ NAME = libft.a
 FLAGS = -Wall -Werror -Wextra -O
 C_FILES = *.c
 O_FILES = *.o
+SRC=src
+INCLUDES=includes
+TESTS=tests
 
 all: $(NAME)
 
 $(NAME): obj.o
-	ar -rcs $(NAME) $(O_FILES)
+	cd $(SRC); \
+	ar -rcs ../$(NAME) $(O_FILES)
 
 so: obj.o
-	$(CC) $(O_FILES) -shared -o libft.so 
+	cd $(SRC); \
+	$(CC) $(O_FILES) -I ../$(INCLUDES) -shared -o ../libft.so 
 
 obj.o:
-	$(CC) $(FLAGS) -c $(C_FILES)
+	cd $(SRC); \
+	$(CC) $(FLAGS) -I ../$(INCLUDES) -c $(C_FILES)
 
 re: fclean all
 
@@ -21,7 +27,10 @@ fclean: clean
 	rm -f $(NAME) libft.so
 
 clean:
-	rm -f $(O_FILES) main
+	cd $(SRC); \
+	rm -f $(O_FILES) 
+	rm -f main
 
 build:
-	$(CC) -lbsd -o main main.c $(NAME)
+	cd $(TESTS); \
+	$(CC) -I ../$(INCLUDES) -lbsd -o ../main main.c ../$(NAME)
