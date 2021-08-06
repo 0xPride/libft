@@ -5,13 +5,14 @@ C_FILES = *.c
 O_FILES = *.o
 SRC=src
 INCLUDES=includes
+BONUS=bonus
 TESTS=tests
 
 all: $(NAME)
 
 $(NAME): obj.o
 	cd $(SRC); \
-	ar -rcs ../$(NAME) $(O_FILES)
+	ar rcs ../$(NAME) $(O_FILES)
 
 so: obj.o
 	cd $(SRC); \
@@ -20,6 +21,11 @@ so: obj.o
 obj.o:
 	cd $(SRC); \
 	$(CC) $(FLAGS) -I ../$(INCLUDES) -c $(C_FILES)
+
+bonus:
+	cd bonus; \
+	$(CC) $(FLAGS) -I ../$(INCLUDES) -c $(C_FILES); \
+	ar rcs ../$(NAME) $(O_FILES)
 
 re: fclean all
 

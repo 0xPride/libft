@@ -24,4 +24,6 @@ int ft_isprint(int c);
 int ft_toupper(int c);
 int ft_tolower(int c);
 void *ft_calloc(size_t nmemb, size_t size);
+// part 2: Additional functions
+char *ft_substr(char const *s, unsigned int start, size_t len);
 #endif
