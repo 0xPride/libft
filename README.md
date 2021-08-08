@@ -27,3 +27,6 @@ libft is a project by 42 scholl aimed to learn c language,
 - ft_strlcpy
 - ft_memchr
 - ft_memcmp
+
+## Part 2: Second Part
+- ft_substr
