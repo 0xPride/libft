@@ -30,3 +30,5 @@ libft is a project by 42 scholl aimed to learn c language,
 
 ## Part 2: Second Part
 - ft_substr
+- ft_strjoin
+- ft_strtrim
