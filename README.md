@@ -40,3 +40,14 @@ libft is a project by 42 scholl aimed to learn c language,
 - ft_putstr_fd
 - ft_putendl_fd
 - ft_putnbr_fd
+
+## Bonus
+- ft_lstnew
+- ft_lstadd_front
+- ft_lstsize
+- ft_lstlast
+- ft_lstadd_back
+- ft_lstdel_one
+- ft_lstclear
+- ft_lstiter
+- ft_lstmap

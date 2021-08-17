@@ -22,11 +22,6 @@ obj.o:
 	cd $(SRC); \
 	$(CC) $(FLAGS) -I ../$(INCLUDES) -c $(C_FILES)
 
-bonus:
-	cd bonus; \
-	$(CC) $(FLAGS) -I ../$(INCLUDES) -c $(C_FILES); \
-	ar rcs ../$(NAME) $(O_FILES)
-
 re: fclean all
 
 fclean: clean
@@ -40,3 +35,8 @@ clean:
 build:
 	cd $(TESTS); \
 	$(CC) -I ../$(INCLUDES) -lbsd -o ../main main.c ../$(NAME)
+
+bonus:
+	cd $(SRC); \
+	$(CC) $(FLAGS) -I ../$(INCLUDES) -c $(C_FILES) $(BONUS)/$(C_FILES); \
+	ar rcs ../$(NAME) $(O_FILES) $(BONUS)/$(O_FILES)
